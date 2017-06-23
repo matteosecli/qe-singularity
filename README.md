@@ -4,14 +4,18 @@ This repository contains all the files necessary to create a [Singularity](http:
 
 ## Quick start
 - Install Singularity: http://singularity.lbl.gov/install-linux
-- Clone this repo and build the image:
+- Pull the image:
+```
+singularity pull shub://matteosecli/qe-singularity
+```
+- Alternatively, clone this repo and build the image:
 ```
 git clone https://github.com/matteosecli/qe-singularity.git && cd qe-singularity && ./createimage.sh
 ```
 - Run `./qe.img --help` for further instructions.
 
 ## TODO
-- Link to Singularity Hub to make installation easier
+- ~~Link to Singularity Hub to make installation easier~~
 - Write a better doc
 - Cleanup the help file
 - Use QE v6.1 instead of v6.0
