@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ] || [ "$1" == "-help" ] || [ "$1" == "--help" ]; then
+    echo "
+    ---------------------------------------------
+    Quantum ESPRESSO 6.0 -- Singularity Container
+    Container version:    `jq -r '.VERSION' /.singularity.d/labels.json`
+    ---------------------------------------------
+
+    To run a Quantum ESPRESSO executable, e.g. 'pw.x', use:
+        ./qe.img pw.x -in relax.in | tee relax.out
+
+    To run an MPI calculation with 'mpirun', use:
+        mpirun -np 4 ./qe.img pw.x -in relax.in | tee relax.out
+    if you have, e.g. 4 processors. Note that the command
+        ./qe.img mpirun -np 4 pw.x -in relax.in | tee relax.out
+    will run through the 'mpirun' binary inside the container,
+    not the local one on your machine.
+    
+    To access an interactive Bash shell inside the container, use:
+        singularity shell qe.img
+    A testcase is available in '/home/qe'. You can run it via:
+        cd /home/qe && pw.x -in relax.in
+
+    To run an automated test in order to check that the container
+    works properly, run
+        singularity test qe.img
+    
+    To access this help message, use:
+        ./qe.img --help
+    '-help' or nothing at all are also valid.
+"
+else
+    "$@"
+fi
