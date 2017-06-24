@@ -28,15 +28,15 @@ This repository contains all the files necessary to create a [Singularity](http:
 - To run an MPI calculation with `mpirun`, use:
 
 		mpirun -np 4 ./qe.img pw.x -in relax.in | tee relax.out
-if you have, e.g. 4 processors. Note that the command
+	if you have, e.g. 4 processors. Note that the command
 
 		./qe.img mpirun -np 4 pw.x -in relax.in | tee relax.out
-will run through the `mpirun` binary inside the container, not the local one on your machine.
+	will run through the `mpirun` binary inside the container, not the local one on your machine.
     
 - To access an interactive Bash shell inside the container, use:
 
 		singularity shell qe.img
-A testcase is available in `/home/qe`. You can run it via:
+	A testcase is available in `/home/qe`. You can run it via:
 
 		cd /home/qe && pw.x -in relax.in
 
@@ -47,7 +47,7 @@ A testcase is available in `/home/qe`. You can run it via:
 - To access this help message, use:
 
 		./qe.img --help
-`-help` or nothing at all are also valid.
+	`-help` or nothing at all are also valid.
 
 ---
 
