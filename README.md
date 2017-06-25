@@ -60,8 +60,8 @@ Still not convinced it's easy enough? Watch the video below:
 
 - [x] Link to Singularity Hub to make installation easier
 - [x] Write a better doc
-- [ ] Cleanup and comment the Singularity file
-- [ ] Cleanup the help file
-- [ ] Use QE v6.1 instead of v6.0
+- [x] Cleanup and comment the Singularity file
+- [x] Cleanup the help file
+- [x] Use QE v6.1 instead of v6.0
 - [ ] Build directly in the container (?)
 - [ ] Use OpenMPI 2.1.1 and try to use host MPI libraries as much as possible (see http://singularity.lbl.gov/docs-hpc, http://singularity.lbl.gov/tutorial-gpu-drivers-open-mpi-mtls and https://www.open-mpi.org/software/ompi/v2.1/)
