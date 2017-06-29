@@ -9,7 +9,7 @@ From: ubuntu:16.04
 
 %labels
     MAINTAINER secli.matteo@gmail.com
-    VERSION 0.2
+    VERSION 0.2.1
 
 %runscript
     exec runhelper "$@"
@@ -28,6 +28,9 @@ From: ubuntu:16.04
         passwd -d qe
     # Install QE dependencies and some utils
         echo "Installing Quantum ESPRESSO and dependencies..."
+	echo "deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu xenial main" \
+        > /etc/apt/sources.list.d/ubuntu-toolchain-r-ubuntu-test-xenial.list
+        apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 1E9377A2BA9EF27F
         apt-get -y -qq update
         apt-get -y -qq install wget jq libgfortran3 liblapack3 libblas3 libfftw3-3 openmpi-bin
         apt-get -y -qq clean

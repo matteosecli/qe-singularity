@@ -5,6 +5,7 @@ if [ -z "$1" ] || [ "$1" == "-help" ] || [ "$1" == "--help" ]; then
 Quantum ESPRESSO 6.1 -- Singularity Container
 ---------------------------------------------
 QE version:           6.1 (svn rev. 13369)
+QE package rev.:      2
 Wannier90 version:    2.1.0
 Environ version:      0.2
 Thermo_PW version:    0.7.0
