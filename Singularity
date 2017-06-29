@@ -9,7 +9,7 @@ From: ubuntu:16.04
 
 %labels
     MAINTAINER secli.matteo@gmail.com
-    VERSION 0.1
+    VERSION 0.2
 
 %runscript
     exec runhelper "$@"
